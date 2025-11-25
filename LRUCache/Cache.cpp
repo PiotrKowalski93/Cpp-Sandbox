@@ -32,16 +32,19 @@ class Cache {
 
 	unordered_map<int, Node*> cache_store;
 
-	Node head;
-	Node tail;
+	Node* head;
+	Node* tail;
 
 	public:
 		Cache(int capacity)	{
 			cache_size = 0;
 			cache_capacity = capacity;
 
-			head.next = &tail;
-			tail.prev = &head;
+			head = new Node(-1, "");
+			tail = new Node(-1, "");
+
+			head->next = tail;
+			tail->prev = head;
 		}
 
 		string get(int key) {
@@ -49,18 +52,17 @@ class Cache {
 			if (node == cache_store.end()) {
 				// Key does not exist
 				return "";
-
 			}
 			else {
 				// Key exist -> Move in priority
 				auto node_ptr = cache_store[key];
 
 				// Add on top
-				head.next->prev = node_ptr;
-				node_ptr->next = head.next;
+				head->next->prev = node_ptr;
+				node_ptr->next = head->next;
 
-				head.next = node_ptr;
-				node_ptr->prev = &head;
+				head->next = node_ptr;
+				node_ptr->prev = head;
 
 				// Return value
 				return node->second->_value;
@@ -74,19 +76,19 @@ class Cache {
 				node_ptr->_value = value;
 
 				// Add on top
-				head.next->prev = node_ptr;
-				node_ptr->next = head.next;
+				head->next->prev = node_ptr;
+				node_ptr->next = head->next;
 
-				head.next = node_ptr;
-				node_ptr->prev = &head;
+				head->next = node_ptr;
+				node_ptr->prev = head;
 			
 				return;
 			}
 
 			if (cache_capacity == cache_size) {
 				// Remove last
-				tail.prev = tail.prev->prev;
-				tail.prev->next = &tail;
+				tail->prev = tail->prev->prev;
+				tail->prev->next = tail;
 
 				// Remove from hashmap
 				cache_store.erase(key);
@@ -94,22 +96,22 @@ class Cache {
 			}
 
 			// Add
-			Node new_node(key, value);
+			Node* new_node = new Node(key, value);
 
-			cache_store[key] = &new_node;
+			cache_store[key] = new_node;
 			cache_size++;
 
 			// Add on top
-			head.next->prev = &new_node;
-			new_node.next = head.next;
+			new_node->next = head->next;
+			new_node->prev = head;
 
-			head.next = &new_node;
-			new_node.prev = &head;
+			head->next->prev = new_node;
+			head->next = new_node;
 		}
 
 		void visualise_cache() {
 			Node* current_ptr;
-			current_ptr = head.next;
+			current_ptr = head->next;
 			while (current_ptr->next != nullptr) {
 				cout << current_ptr->_value << " ";
 				current_ptr = current_ptr->next;
