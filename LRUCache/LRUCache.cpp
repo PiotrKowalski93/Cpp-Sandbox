@@ -16,6 +16,9 @@ int main()
 
 	cache.visualise_cache();
 	
+	cout << cache.get(1) << endl;
+
+	cache.visualise_cache();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

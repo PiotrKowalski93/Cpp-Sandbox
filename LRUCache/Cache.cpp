@@ -55,14 +55,18 @@ class Cache {
 			}
 			else {
 				// Key exist -> Move in priority
-				auto node_ptr = cache_store[key];
+				auto node_ptr = cache_store.at(key);
+
+				// Remove from end
+				node_ptr->prev->next = node_ptr->next;
+				node_ptr->next->prev = node_ptr->prev;
 
 				// Add on top
-				head->next->prev = node_ptr;
 				node_ptr->next = head->next;
-
-				head->next = node_ptr;
 				node_ptr->prev = head;
+
+				head->next->prev = node_ptr;
+				head->next = node_ptr;
 
 				// Return value
 				return node->second->_value;
