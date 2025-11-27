@@ -175,9 +175,9 @@ void List_SimulateOrderBookOperations() {
     int INITIAL_SIZE = 100'000;
     int OPS = 50'000;
 
-    double INSERT_RATIO = 0.80;
-    double ERASE_RATIO = 0.10;
-    double SCAN_RATIO = 0.10;
+    double INSERT_RATIO(0.80);
+    double ERASE_RATIO(0.10);
+    double SCAN_RATIO(0.10);
     
     mt19937 rng(123);
     uniform_int_distribution<int> value_gen(1, 1'000'000);

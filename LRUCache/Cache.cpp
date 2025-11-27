@@ -27,8 +27,8 @@ public:
 };
 
 class Cache {
-	int cache_capacity;
-	int cache_size;
+	int cache_capacity{};
+	int cache_size{};
 
 	unordered_map<int, Node*> cache_store;
 
