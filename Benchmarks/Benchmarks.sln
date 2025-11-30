@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Benchmarks", "Benchmarks.vc
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LRUCache", "..\LRUCache\LRUCache.vcxproj", "{C7F65D79-4B93-43E7-8241-AC5B7F15766F}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TransactionCostService", "..\TransactionCostService\TransactionCostService.vcxproj", "{9F15A17C-9FB4-40C3-91B2-0BA486268723}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{C7F65D79-4B93-43E7-8241-AC5B7F15766F}.Release|x64.Build.0 = Release|x64
 		{C7F65D79-4B93-43E7-8241-AC5B7F15766F}.Release|x86.ActiveCfg = Release|Win32
 		{C7F65D79-4B93-43E7-8241-AC5B7F15766F}.Release|x86.Build.0 = Release|Win32
+		{9F15A17C-9FB4-40C3-91B2-0BA486268723}.Debug|x64.ActiveCfg = Debug|x64
+		{9F15A17C-9FB4-40C3-91B2-0BA486268723}.Debug|x64.Build.0 = Debug|x64
+		{9F15A17C-9FB4-40C3-91B2-0BA486268723}.Debug|x86.ActiveCfg = Debug|Win32
+		{9F15A17C-9FB4-40C3-91B2-0BA486268723}.Debug|x86.Build.0 = Debug|Win32
+		{9F15A17C-9FB4-40C3-91B2-0BA486268723}.Release|x64.ActiveCfg = Release|x64
+		{9F15A17C-9FB4-40C3-91B2-0BA486268723}.Release|x64.Build.0 = Release|x64
+		{9F15A17C-9FB4-40C3-91B2-0BA486268723}.Release|x86.ActiveCfg = Release|Win32
+		{9F15A17C-9FB4-40C3-91B2-0BA486268723}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
