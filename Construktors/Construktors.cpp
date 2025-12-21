@@ -1,22 +1,28 @@
 #include <iostream>
 using namespace std;
 
+// good rule of thumb: An object is cheap to copy if it uses 
+// 2 or fewer “words” of memory (where a “word” is approximated by the size of a memory address) 
+// and it has no setup costs.
+#define isSmall(T) (sizeof(T) <= 2 * sizeof(void*))
+
+struct S
+{
+    double a;
+    double b;
+    double c;
+};
+
 int main()
 {
-    int x{ 1 };
-    int& ref{ x };
+    std::cout << std::boolalpha; // print true or false rather than 1 or 0
+    std::cout << isSmall(int) << '\n'; // true
 
-    std::cout << x << ref << '\n';
+    double d{};
+    std::cout << isSmall(d) << '\n'; // true
+    std::cout << isSmall(S) << '\n'; // false
 
-    int y{ 2 };
-    ref = y;
-    y = 3;
-
-    std::cout << x << " " << ref << " " << y << '\n';
-
-    x = 4;
-
-    std::cout << x << ref << '\n';
+    return 0;
 }
 
 class Sample {
