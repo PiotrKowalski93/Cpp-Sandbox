@@ -22,6 +22,15 @@ int main()
     std::cout << isSmall(d) << '\n'; // true
     std::cout << isSmall(S) << '\n'; // false
 
+    int x{ 5 };
+    int* y;
+    y = &x;
+    cout << *y << endl;
+    cout << x << endl;
+    cout << &x << endl;
+    cout << *&x << endl;
+
+
     return 0;
 }
 
