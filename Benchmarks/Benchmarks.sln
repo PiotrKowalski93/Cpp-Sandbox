@@ -13,7 +13,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Construktors", "..\Construk
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Pointers", "..\Pointers\Pointers.vcxproj", "{0EFFE597-10F9-491E-9984-ACCFF8B6330D}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Composition", "..\Composition\Composition.vcxproj", "{9B7A1F02-8BD1-4D55-A478-D1E6077ADC1A}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Polymorphism", "..\Composition\Composition.vcxproj", "{9B7A1F02-8BD1-4D55-A478-D1E6077ADC1A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DataAligning", "..\DataAligning\DataAligning.vcxproj", "{7C10F774-5CDA-4650-9918-9FB848641867}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,6 +73,14 @@ Global
 		{9B7A1F02-8BD1-4D55-A478-D1E6077ADC1A}.Release|x64.Build.0 = Release|x64
 		{9B7A1F02-8BD1-4D55-A478-D1E6077ADC1A}.Release|x86.ActiveCfg = Release|Win32
 		{9B7A1F02-8BD1-4D55-A478-D1E6077ADC1A}.Release|x86.Build.0 = Release|Win32
+		{7C10F774-5CDA-4650-9918-9FB848641867}.Debug|x64.ActiveCfg = Debug|x64
+		{7C10F774-5CDA-4650-9918-9FB848641867}.Debug|x64.Build.0 = Debug|x64
+		{7C10F774-5CDA-4650-9918-9FB848641867}.Debug|x86.ActiveCfg = Debug|Win32
+		{7C10F774-5CDA-4650-9918-9FB848641867}.Debug|x86.Build.0 = Debug|Win32
+		{7C10F774-5CDA-4650-9918-9FB848641867}.Release|x64.ActiveCfg = Release|x64
+		{7C10F774-5CDA-4650-9918-9FB848641867}.Release|x64.Build.0 = Release|x64
+		{7C10F774-5CDA-4650-9918-9FB848641867}.Release|x86.ActiveCfg = Release|Win32
+		{7C10F774-5CDA-4650-9918-9FB848641867}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
